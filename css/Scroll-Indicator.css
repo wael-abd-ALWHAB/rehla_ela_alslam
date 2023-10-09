@@ -1,0 +1,12 @@
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: burlywood;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 5px;
+    background: #000;
+    width: 0%;
+  }
