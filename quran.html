@@ -21,38 +21,6 @@
 <body>
 	
 <!-- <body class="full-width"> -->
-	<style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-
-    #fullscreenDiv {
-      width: 100%;
-      height: 100%;
-      background-color: lightblue;
-      display: none; /* Initially hidden */
-    }
-
-    #fullscreenButton {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 1;
-      width:100px;
-      border-radius:15px;
-      padding:30px;
-    }
-  </style>
-
-
-
-  <button id="fullscreenButton">Toggle Fullscreen</button>
-
-  <div id="fullscreenDiv">
-    <!-- Content of the fullscreen div goes here -->
-    <p>This is fullscreen content!</p>
-  </div>
 
  
 
@@ -88,10 +56,9 @@
 				<h1 >السور</h1>
 			</div>
 			</div>
-			<div id="fullscreenDiv">
+			
     			<div class="main-content">
 				<iframe src="https://drive.google.com/file/d/1bTjsmo7PV1OdjHsWHgr89CWyOP0qo-ye/preview" width="640" height="480" allow="autoplay"  class="main-item"></iframe>
-			 </div>
     
 			</div>
 			
@@ -331,32 +298,7 @@
 	<script type="text/javascript" src="js/Scroll-Indicator.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 	<script type="text/javascript" src="js/video-player.js"></script>
-	 <script>
-    const fullscreenButton = document.getElementById('fullscreenButton');
-    const fullscreenDiv = document.getElementById('fullscreenDiv');
-
-    fullscreenButton.addEventListener('click', toggleFullscreen);
-
-    function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        // If no element is in fullscreen, make the div fullscreen
-        fullscreenDiv.requestFullscreen().catch(err => {
-          console.error(`Error attempting to enable fullscreen: ${err.message}`);
-        });
-      } else {
-        // If an element is in fullscreen, exit fullscreen
-        document.exitFullscreen();
-      }
-    }
-
-    // Listen for fullscreen change event
-    document.addEventListener('fullscreenchange', () => {
-      if (document.fullscreenElement) {
-        fullscreenDiv.style.display = 'block'; // Show the fullscreen div
-      } else {
-        fullscreenDiv.style.display = 'none'; // Hide the fullscreen div
-      }
-    });
-  </script>
+	
+  
 </body>
 </html>
